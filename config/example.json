@@ -1,0 +1,27 @@
+{
+  "mail": {
+    "imap": {
+      "host": "",
+      "port": 993,
+      "secure": true,
+      "authTimeout": 10000
+    },
+    "handleUnknown": false,
+    "blacklist": [],
+    "mailbox": "INBOX"
+  },
+  "log": {
+    "level": "info"
+  },
+  "discord": {
+    "channelId": "",
+    "guildId": "",
+    "owner": ""
+  },
+  "theme": {
+    "default": "#161617",
+    "error": "#ff0000",
+    "warning": "#ffae42",
+    "success": "#00ff00"
+  }
+}

@@ -1,0 +1,10 @@
+compiled
+tsc_compiled
+node_modules
+.VSCodeCounter
+
+.env*
+!.env.example
+
+config/*
+!config/example.json

@@ -1,0 +1,58 @@
+{
+  "name": "mailcord",
+  "version": "3.0.0",
+  "description": "A Discord bot to forward e-mails (from a hub) to a configured channel.",
+  "main": "compiled/src/index.js",
+  "scripts": {
+    "build": "rimraf compiled && swc src -d compiled",
+    "start": "node --env-file .env.prod compiled/src/index.js --script",
+    "dev": "node --env-file .env.dev compiled/src/index.js --script",
+    "db:push": "dotenv -e .env.prod -- prisma db push",
+    "db:push:dev": "dotenv -e .env.dev -- prisma db push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxtzel/mailcord.git"
+  },
+  "author": "Daniel Joe",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/pxtzel/mailcord/issues"
+  },
+  "homepage": "https://github.com/pxtzel/mailcord#readme",
+  "devDependencies": {
+    "@swc/cli": "^0.3.9",
+    "@swc/core": "^1.4.2",
+    "@types/config": "^3.3.3",
+    "@types/imap-simple": "^4.2.9",
+    "@types/imapflow": "^1.0.18",
+    "@types/mailparser": "^3.4.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "chokidar": "^3.6.0",
+    "dotenv-cli": "^7.3.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-sonarjs": "^0.24.0",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "prisma": "^5.10.2",
+    "rimraf": "^5.0.5",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@prisma/client": "5.10.2",
+    "axios": "^1.6.7",
+    "cheerio": "1.0.0-rc.12",
+    "config": "^3.3.11",
+    "date-fns": "^3.3.1",
+    "discord.js": "^14.14.1",
+    "imapflow": "^1.0.152",
+    "mailparser": "^3.6.7",
+    "parse-human-relative-time": "^3.0.2",
+    "winston": "^3.11.0"
+  }
+}

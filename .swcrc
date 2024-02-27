@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "target": "es2019",
+    "minify": {
+      "compress": true
+    },
+    "parser": {
+      "syntax": "typescript"
+    },
+    "baseUrl": "./",
+    "paths": {
+      "@config": ["src/config/index.js"],
+      "@util/*": ["src/util/*"],
+      "@database": ["src/database/index.js"]
+    }
+  }
+}
