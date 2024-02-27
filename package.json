@@ -6,9 +6,9 @@
   "scripts": {
     "build": "rimraf compiled && swc src -d compiled",
     "start": "node --env-file .env.prod compiled/src/index.js --script",
-    "dev": "node --env-file .env.dev compiled/src/index.js --script",
-    "db:push": "dotenv -e .env.prod -- prisma db push",
-    "db:push:dev": "dotenv -e .env.dev -- prisma db push"
+    "dev": "node --env-file .env.development compiled/src/index.js --script",
+    "db:push": "dotenv -e .env.production -- prisma db push",
+    "db:push:dev": "dotenv -e .env.development -- prisma db push"
   },
   "repository": {
     "type": "git",
