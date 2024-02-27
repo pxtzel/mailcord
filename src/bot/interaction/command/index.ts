@@ -8,9 +8,16 @@ import logger from '@util/log';
 import config from '@config';
 
 const pingCmd = {
-  data: new SlashCommandBuilder().setName('ping').setDescription('Pong!'),
-  handle: async (_client: Client, interaction: ChatInputCommandInteraction) => {
-    await interaction.reply('Pong!');
+  data: new SlashCommandBuilder()
+    .setName('ping')
+    .setDescription("Test the bot's latency"),
+  handle: async (client: Client, interaction: ChatInputCommandInteraction) => {
+    const clientLatency = Date.now() - interaction.createdTimestamp;
+    const apiLatency = Math.round(client.ws.ping);
+
+    await interaction.reply({
+      content: `Pong!\nClient latency: ${clientLatency}ms\nAPI latency: ${apiLatency}ms`
+    });
   }
 };
 
