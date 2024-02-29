@@ -5,7 +5,7 @@
   "main": "compiled/src/index.js",
   "scripts": {
     "build": "rimraf compiled && swc src -d compiled",
-    "start": "node --env-file .env.prod compiled/src/index.js",
+    "start": "node --env-file .env.production compiled/src/index.js",
     "dev": "node --env-file .env.development compiled/src/index.js",
     "db:push": "dotenv -e .env.production -- prisma db push",
     "db:push:dev": "dotenv -e .env.development -- prisma db push"
