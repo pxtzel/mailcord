@@ -36,6 +36,7 @@ export const startListening = async (): Promise<void> => {
 };
 
 export const start = async (): Promise<void> => {
+  console.log(config.)
   await client.connect();
   logger.info('Connected to email server');
   await client.mailboxOpen(config.mail.mailbox);
