@@ -1,0 +1,20 @@
+{
+  "mail": {
+    "imap": {
+      "host": "imap-mail.outlook.com",
+      "port": 993,
+      "secure": true,
+      "authTimeout": 10000
+    },
+    "handleUnknown": true,
+    "blacklist": [],
+    "mailbox": "INBOX"
+  },
+  "log": {
+    "level": "info"
+  },
+  "discord": {
+    "channelId": "1211989632871305246",
+    "guildId": "1181878078796992562"
+  }
+}
